@@ -1,6 +1,6 @@
 const User = require("../../models/User");
-const jwt_secret="kirandeep7889";
-const jwt=require("jsonwebtoken");
+const dotenv = require("dotenv");
+dotenv.config();
 
 
 
@@ -12,7 +12,7 @@ async function userLogin(req,res) {
         if (!user) {
           return res.status(401).json({ error: 'Invalid email or password' });
         }
-        const token = jwt.sign({ userId: user._id }, jwt_secret );
+        const token = jwt.sign({ userId: user._id }, process.env.jwt_secret );
     
         res.json({ token });
       } catch (error) {

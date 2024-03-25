@@ -1,5 +1,4 @@
 const express=require("express");
-const authMiddleware = require("../middleware/authMiddleware");
 const getTopics = require("../handlers/quizHandlers/topicsHandler");
 const getQuestions = require("../handlers/quizHandlers/questionsHandler");
 const resultHanlder = require("../handlers/quizHandlers/resultHandler");

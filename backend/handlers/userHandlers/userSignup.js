@@ -1,6 +1,7 @@
 const User=require("../../models/User");
 const jwt=require("jsonwebtoken");
-const jwt_secret="kirandeep7889";
+const dotenv = require("dotenv");
+dotenv.config();
 
 
 async function userSignup(req,res) {
@@ -15,7 +16,7 @@ async function userSignup(req,res) {
     const newUser = new User({ name, email,password, phoneNumber });
       await newUser.save();
 
-      const token=jwt.sign({userId:newUser._id},jwt_secret);
+      const token=jwt.sign({userId:newUser._id}, process.env.jwt_secret);
 
       res.json({
         token
