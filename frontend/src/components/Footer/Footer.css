@@ -1,0 +1,56 @@
+.footer {
+    color: black;
+    padding: 20px;
+    height: 30px;
+    border-top: 1px solid gainsboro;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer .left {
+    float: left;
+  }
+  
+  .footer .right {
+    float: right;
+  }
+  
+  .social-icons {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .social-icons li:last-child {
+    margin-right: 0;
+  }
+  
+  .social-icons a {
+    color: black;
+
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  .contact-info p {
+    margin: 5px 0;
+  }
+
+  .social-icons a:hover {
+    opacity: 0.5;
+  }
+  
+  @media (max-width: 768px) {
+    .footer .left, .footer .right {
+      float: none;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+  
